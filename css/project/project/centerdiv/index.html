@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #191825;
+
+            /* 1st way */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 2nd way */
+            /* position: relative; */
+
+            /* 3rd way */
+            /* display: grid;
+            justify-content: center;
+            align-items: center; */
+
+            /* 4th way */
+            /* display: grid;
+            place-items: center; */
+
+            /* 5th way */
+            /* display: flex; */
+            
+        }
+        .child{
+            width: 20vw;
+            height: 150px;
+            background-color: #125689;
+
+            /* 2n way */
+            /* position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%); */
+
+            /* 5th way */
+            /* margin: auto; */
+
+
+            /* text center */
+            display: grid;
+            place-items: center;
+
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: aliceblue;
+            text-transform: uppercase;
+            /* text-align: center; */
+            text-align: justify;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="child">center text fsdgj gfsdjgs dfsgfds gfs dg fsgsdfg sdf</div>
+</body>
+</html>

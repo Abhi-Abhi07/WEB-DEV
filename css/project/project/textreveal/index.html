@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text float</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Urbanist";
+        /* font-family: "Bungee Spice", cursive; */
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #191825;
+      }
+      h1{
+        font-size: 9.6rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+      h1::before{
+        position: absolute;
+        content: "subscribe...";
+        color: #e6856d;
+        text-transform: uppercase;
+        left: 0;
+        top: 0;
+        /* width: 80%; */
+        overflow: hidden;
+        border-right:2px solid #e6856d;
+        animation: textReavel 1s linear infinite alternate;
+      }
+      @keyframes textReavel {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SUBSCRIBE...</h1>
+  </body>
+</html>

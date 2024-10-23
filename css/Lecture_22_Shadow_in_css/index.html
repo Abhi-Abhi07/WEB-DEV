@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color:red;
+            --custom-width:500px;
+        }
+        .container{
+            padding: 2px;
+            margin: 2px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            height: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            /* --primary-color:red;
+            --custom-width:500px; */
+            padding: 2px;
+            margin: 2px;
+            background-color: beige;
+            width: var(--custom-width);
+            height: 500px;
+            border: 1px solid purple;
+            box-shadow: 10px 10px;
+            /* box-shadow: -10px 15px var(--primary-color); */
+            /* box-shadow: 7px -11px 5px greenyellow; */
+            /* box-shadow: 10px 20px 5px 30px red; */
+            /* box-shadow: inset -10px -30px aqua; */
+            /* box-shadow: -10px -30px aqua,15px 20px red,inset -10px -30px blue; */
+
+            
+        }
+        #head1{
+            /* text-shadow: 2px 3px goldenrod; */
+            /* text-shadow: -2px 3px 5px  red; */
+            /* text-shadow: 2px 3px 5px blue,-2px 3px 5px  red; */
+            text-shadow: 10px 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img src="logo.jpeg" alt="Ai" />
+        <h1 id="head1">Welcome To Ai</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio esse
+          velit exercitationem iusto, praesentium minus, repellat doloribus
+          obcaecati numquam sapiente beatae enim placeat rem minima! Veritatis
+          suscipit quaerat minima quibusdam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

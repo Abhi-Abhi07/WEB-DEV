@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul.no-bullets {
+          list-style-type: none; /*remove bullet*/
+          /* margin: 0; /*remove margin */
+          /* padding: 0; /*remove padding */
+        }
+    </style>
+</head>
+<body>
+    <!-- ul -->
+    <ul></ul>
+
+    <!-- ul>li -->
+    <ul>
+        <li></li>
+    </ul>
+
+    <!-- ul>li*3 -->
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+
+    <!-- ul>(li>p)*3 -->
+    <ul>
+        <li>
+            <p>A</p>
+        </li>
+        <li>
+            <p>B</p>
+        </li>
+        <li>
+            <p>C</p>
+        </li>
+    </ul>
+
+    <!-- ul>(li>p>a)*3 -->
+    <ul>
+        <li>
+            <p><a href="https://www.google.com">A</a></p>
+        </li>
+        <li>
+            <p><a href="">B</a></p>
+        </li>
+        <li>
+            <p><a href="">C</a></p>
+        </li>
+    </ul>
+
+    <!-- nav>ul>(li>a)*3 -->
+    <nav>
+        <ul class="no-bullets">
+            <li>
+            <a href="https://www.google.com">Home</a>
+            <a href="">About US</a>
+            <a href="">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+</body>
+</html>

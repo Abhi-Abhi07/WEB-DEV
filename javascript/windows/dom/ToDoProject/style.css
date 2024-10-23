@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Urbanist", sans-serif;
+    background-color: #1b1b1d;
+}
+h1{
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+    background-color: #f8f3f3b2;
+    padding: 0.2rem;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+#inputValue{
+    width: 24rem;
+    height: 2.8rem;
+    letter-spacing: 0.12rem;
+    font-size: 2rem;
+}
+button{
+    margin-left: 2rem;
+    width: 12rem;
+    line-height: 1.6;
+    height: 3.6rem;
+    background-color: #f5ee62;
+    border-radius: 8rem;
+    -webkit-border-radius: 8rem;
+    -moz-border-radius: 8rem;
+    -ms-border-radius: 8rem;
+    -o-border-radius: 8rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+button:hover {
+    box-shadow: inset 0 0 0 0.2rem #f5ee62;
+    background-color: transparent;
+    color: #f5ee62;
+  }
+
+.main_todo_div{
+width: 36rem;
+display: grid;
+grid-template-columns: 1fr 0.3fr;
+align-items: center;
+height: auto;
+}
+
+li{
+    color: #f5ee62;
+    font-size: 2rem;
+    list-style-type:circle;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+li:hover + .deleteBtn{
+    box-shadow: inset 0 0 0 0.2rem #f5ee62;
+    background-color: transparent;
+    color: #f5ee62;
+}
+input{
+    padding: 0.6rem 0.2rem;
+    min-width: 24rem;
+    font-size: 1.8rem;
+    border: none;
+    margin-right: 0.6rem;
+    border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+}
+
+

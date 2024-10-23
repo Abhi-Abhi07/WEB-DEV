@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        padding: 5px;
+        margin: 5px;
+        background-color: beige;
+        border: 5px solid black;
+        display: flex;
+        height: 500px;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        /* flex-flow: row wrap; */
+
+        /* flex-direction: column; */
+        /* justify-content: start; */
+
+        flex-direction: column;
+        /* align-items: flex-end; */
+        /* stretch ke liye ek baar .box{} me height ko commet kre or live server par jaye */
+        /* By default bhi stretch ki hota hai or align-items: stretch: ko bhi comment kre
+        or live server par jaaye */
+
+        /* justify-content: center;
+        align-items: center; */
+
+        /* flex-wrap: wrap; */
+        /* justify-content: flex-end; */
+        /* align-items: reverse; */
+        /* align-content: start;  */
+      }
+
+      .box {
+        border: 2px solid aqua;
+        width: 150px;
+        height: 150px;
+        padding: 2px;
+        margin: 2px;
+
+        /* short hand property */
+        /* The three properties assigned to the .item 
+        class can be shortened in one line using the flex shorthand property. 
+        You have to enter the values in this order:
+        1.flex-grow
+        2.flex-shrink
+        3.flex-basis */
+        /* flex: 1 1 150px; */
+      }
+      #box1 {
+        background-color: blueviolet;
+        /* order: 4; */
+        /* flex-shrink: 4; */
+        /* flex-grow: 4; */
+        /* align-self: flex-end; */
+
+      }
+
+      #box2 {
+        background-color: blue;
+        /* flex-grow: 1; */
+      }
+
+      #box3 {
+        background-color: chartreuse;
+        /* order: -1; */
+        /* flex-grow: 1; */
+      }
+
+      #box4 {
+        background-color: deeppink;
+        /* order: -2; */
+        /* flex-grow: 1; */
+        /* flex-basis: 400px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1">box1</div>
+      <div class="box" id="box2">box2</div>
+      <div class="box" id="box3">box3</div>
+      <div class="box" id="box4">box4</div>
+    </div>
+  </body>
+</html>

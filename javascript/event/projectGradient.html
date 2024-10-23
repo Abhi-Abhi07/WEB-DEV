@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            font-family: "Urbanist", sans-serif;
+            /* background-color: #1b1b1d; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, #051937,#008793);
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            font-size: 1.7rem;
+            letter-spacing: 0.1rem;
+            font-family: "Urbanist", sans-serif;
+            line-height: 1.6;
+            padding: 0.6rem 2.4rem;
+            border-radius: 8rem;
+            margin-right: 3.6rem;
+            margin-left: 4rem;
+            color: #fff;
+            border-radius: 2px solid green;
+            
+           
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+        #myButton{
+            background-color: #161512;
+            /* margin-left: 28rem;
+            margin-top: 18rem; */
+        }
+        #myButton2{
+            color: #ffffff;
+            background-color: #00ff2f;
+        }
+        h2{
+            font-size: 1.7rem;
+            letter-spacing: 0.1rem;
+            font-family: "Urbanist", sans-serif;
+            line-height: 1.6;
+            display: flex;
+            /* justify-content: center; */
+            /* place-items: center; */
+            place-content: center;   
+            margin-top: 3rem;
+            border-radius: 3rem; 
+        }
+        .copyCode{
+            font-size: 1.7rem;
+            letter-spacing: 0.1rem;
+            margin-top: 2rem;
+            padding-left: 1rem;
+            font-family: "Urbanist", sans-serif;
+            line-height: 1.6;
+            border-radius: 2rem;
+            width: 40rem;
+            background-color: aqua;
+            /* margin-left: 25rem; */
+            /* display: flex;
+            justify-content: center; */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="btn">
+            <button id="myButton">#051937</button>
+            <button id="myButton2">#008793</button>
+        </div>
+        <h2>copy your code here</h2>
+        <div class="copyCode">
+            background-image: linear-gradient(to right, #051937,#008793);
+        </div>
+    </section>
+    <script>
+        let btn1=document.getElementById("myButton");
+        let btn2=document.getElementById("myButton2");
+        let copyDiv=document.querySelector(".copyCode");
+        let rgb1="#051937";
+        let rgb2="#008793";
+        const haxValues=(()=>{
+            let myColor="#";
+            let myHexValues="0123456789abcdef";
+            for(let i=0; i<6; i++){
+                const randomValue=Math.floor(Math.random(i)*16);
+                myColor+=myHexValues[randomValue];
+            }
+            // console.log(myColor);
+            return myColor;
+        });
+
+        const handleBtn1=()=>{
+            rgb1=haxValues();
+            document.body.style.backgroundImage= `linear-gradient(to right, ${rgb1},${rgb2})`;
+            copyDiv.innerHTML=`background-image: linear-gradient(to right, ${rgb1},${rgb2});`;
+            btn1.innerHTML=`${rgb1}`;
+        }
+        
+        const handleBtn2=()=>{
+            rgb2=haxValues();
+            document.body.style.backgroundImage= `linear-gradient(to right, ${rgb1},${rgb2})`;
+            copyDiv.innerHTML=`background-image: linear-gradient(to right, ${rgb1},${rgb2});`;
+            btn2.innerHTML=`${rgb2}`;
+        }
+        
+        btn1.addEventListener("click", handleBtn1);
+        btn2.addEventListener("click", handleBtn2);
+        
+        copyDiv.addEventListener("click",()=>{
+            navigator.clipboard.writeText(copyDiv.textContent);
+            alert(`code copied!`);
+
+        });
+    </script>
+</body>
+</html>

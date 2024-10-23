@@ -1,0 +1,7 @@
+Article tag:
+The article tag is used for wrapping an autonomous content on a page.
+A content is autonomous if it can be removed from the page and put on some another page.
+
+Section tag:
+The section tag is similar to the div tag, but it is more meaningful since it wraps 
+logical groups of related content (e.g. a chapter of an article).

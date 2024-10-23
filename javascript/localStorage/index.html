@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+     
+        }
+        button{
+            font-size: 1.7rem;
+            letter-spacing: 0.1rem;
+            font-family: "Urbanist", sans-serif;
+            line-height: 1.6;
+            padding: 0.6rem 2.4rem;
+            border-radius: 8rem;
+            margin-right: 3.6rem;
+            margin-left: 4rem;
+            border: 0px solid #fff;
+            text-transform: capitalize;
+            font-weight: 600;
+           
+        }
+        #addData{
+            background-color: #b2f507;;
+        }
+        #getData{
+            background-color: #09ee61;;
+        }
+        #removeData{
+            background-color: #eb1168;;
+        }
+        button:hover{
+            color: #fff;
+        }
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <button id="addData">add data to localStorage</button>
+        <button id="getData">get data from localStorage</button>
+        <button id="removeData">delete data to localStorage</button>
+    </div>
+
+    <script>
+        // How to add the data from localStorage
+        localStorage.setItem("youtubeJsCourse", "addingData");
+
+        // How to get the data from localStorage
+        // localStorage.getItem("youtubeJsCourse");
+
+        // How to remove the data from localStorage
+        localStorage.removeItem("youtubeJsCourse");
+        
+        const studentBioData={
+            Name:"Abhi",
+            ID:"01",
+            Age:"21",
+            Grade:"A++",
+            Courses:["JS","css","html"],
+            Branch:"CS",
+            Address:{
+                District:"Ajmer",
+                State:"Rajasthan",
+                Country:"INDIA",
+            }
+        };
+
+        const addToDoList=(()=>{
+            localStorage.setItem("objectStudentData",JSON.stringify(studentBioData));
+        });
+        document.getElementById("addData").addEventListener("click",()=>{
+            addToDoList();
+        });
+        
+        const getToDoList=(()=>{
+            const retriveData=localStorage.getItem("objectStudentData");
+            const retriveDataConvert=JSON.parse(localStorage.getItem("objectStudentData"));
+            console.log("Retrive data type : ",typeof retriveData );
+            console.log("Retrive data convert type : ",typeof retriveDataConvert);
+            console.log("Retrive data : ",retriveData );
+            console.log("Retrive data convert : ", retriveDataConvert);
+        });
+        document.getElementById("getData").addEventListener("click",()=>{
+            getToDoList();
+        });
+
+        const removeToDoList=(()=>{
+            localStorage.removeItem("objectStudentData");
+        });
+        document.getElementById("removeData").addEventListener("click",()=>{
+            removeToDoList();
+        });
+    </script>
+</body>
+</html>
