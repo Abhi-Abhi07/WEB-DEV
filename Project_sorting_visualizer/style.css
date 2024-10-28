@@ -1,0 +1,188 @@
+/* General reset for padding, margin, and setting box-sizing for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body background with a radial gradient */
+body {
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+/* Main container styling */
+.conatiner {
+    background: #e0e0e0;
+    border: 2px solid green;
+    width: auto;
+    height: 100vh;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+/* Button container with flex layout and space-around alignment */
+.btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* General button styling for buttons and range_style_btn class */
+button, .range_style_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem 0.2rem;
+    margin: 0.48rem 0.1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #ffffff;
+    border: 1px solid #000000;
+    background-color: #7242f5;
+    width: 16rem;
+    height: 3.4rem;
+    transition: all 0.4s ease-out;
+}
+
+/* Sorting button specific margin adjustment */
+.sort_btn {
+    margin-top: 0.5rem;
+}
+
+/* Button hover effects: scale, shadow, color change */
+button:hover, .range_style_btn:hover {
+    cursor: pointer;
+    background-color: #f3f1ec;
+    color: #000000;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 32px 10px #f3f1ec;
+}
+
+/* Logo styling with gradient text effect and drop shadow */
+.logo {
+    text-shadow: 0px 0px 15px #000;
+    font-family: "Dancing Script", cursive;
+    width: 16rem;
+    height: 4.8rem;
+    margin: 0.2rem auto 0.4rem auto;
+    font-weight: 700;
+    font-size: 32px;
+    background: linear-gradient(150deg, #6e01a3 14%, #005a9f 40%, #8c0038 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+/* Logo hover effects: scale, shadow, and text adjustments */
+.logo:hover {
+    text-shadow: 0px 0px 15px #fff, 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Array container with border, flexbox alignment, and background color */
+.array_container {
+    border-bottom: 8px solid black;
+    border-radius: 10px;
+    width: 90vw;
+    height: 68vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #94bbe9;
+}
+
+/* Each array bar styling with flex-grow and rounded corners */
+.array_bar {
+    background-color: #fff;
+    margin: 0 2px;
+    flex: 1;
+    border-radius: 5px;
+    transition: height 0.3s ease;
+}
+
+/* Layout containers for algorithm speed and array size with gap between elements */
+.algo_speed_container, .array-size-container {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Input range slider styling */
+input[type="range"] {
+    appearance: none;
+    width: 320px;
+    height: 54px;
+    padding: 20px;
+    margin: auto;
+    background: #e0e0e0;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: -2px -2px 8px white, 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Track styling for WebKit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 8px white, inset 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Track styling for Mozilla browsers */
+input[type="range"]::-moz-range-track {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 8px white, inset 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Thumb styling for WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    position: relative;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    box-shadow: -1px -1px 2px white, 1px 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Thumb styling for Mozilla browsers */
+input[type="range"]::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    box-shadow: -1px -1px 2px white, 1px 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+/* Media query for screens up to 1400px width */
+@media (max-width: 1400px) {
+    .control_btn {
+        flex-direction: column;
+        align-items: center;
+    }
+    button, .range_style_btn {
+        font-size: 18px;
+        width: 14rem;
+        height: 2.6rem;
+    }
+    .array_container {
+        width: 90vw;
+        height: 56vh;
+    }
+}
