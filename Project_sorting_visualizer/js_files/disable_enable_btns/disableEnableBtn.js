@@ -1,31 +1,37 @@
-function disableSortingAlogBtns(){
-    document.querySelector(".bubble_sort").disabled=true;
-    document.querySelector(".selection_sort").disabled=true;
-    document.querySelector(".insertion_sort").disabled=true;
-    document.querySelector(".merge_sort").disabled=true;
-    document.querySelector(".quick_sort").disabled=true;
+// Disables all sorting algorithm buttons to prevent user interaction during sorting
+function disableSortingAlogBtns() {
+    document.querySelector(".bubble_sort").disabled = true;
+    document.querySelector(".selection_sort").disabled = true;
+    document.querySelector(".insertion_sort").disabled = true;
+    document.querySelector(".merge_sort").disabled = true;
+    document.querySelector(".quick_sort").disabled = true;
 }
 
-function enableSortingAlgoBtns(){
-    document.querySelector(".bubble_sort").disabled=false;
-    document.querySelector(".selection_sort").disabled=false;
-    document.querySelector(".insertion_sort").disabled=false;
-    document.querySelector(".merge_sort").disabled=false;
-    document.querySelector(".quick_sort").disabled=false;
+// Enables all sorting algorithm buttons after sorting is complete
+function enableSortingAlgoBtns() {
+    document.querySelector(".bubble_sort").disabled = false;
+    document.querySelector(".selection_sort").disabled = false;
+    document.querySelector(".insertion_sort").disabled = false;
+    document.querySelector(".merge_sort").disabled = false;
+    document.querySelector(".quick_sort").disabled = false;
 }
 
-function disableNewArrayGenerateBtn(){
-    document.getElementById("generateArrayBtn").disabled=true;
+// Disables the "Generate New Array" button to prevent new array generation during sorting
+function disableNewArrayGenerateBtn() {
+    document.getElementById("generateArrayBtn").disabled = true;
 }
 
-function enableNewArrayGenerateBtn(){
-    document.getElementById("generateArrayBtn").disabled=false;
+// Enables the "Generate New Array" button after sorting is complete
+function enableNewArrayGenerateBtn() {
+    document.getElementById("generateArrayBtn").disabled = false;
 }
 
-function disableArraySizeBtn(){
-    document.getElementById("arraySize").disabled=true;
+// Disables the "Array Size" slider to prevent resizing the array during sorting
+function disableArraySizeBtn() {
+    document.getElementById("arraySize").disabled = true;
 }
 
-function enableArraySizeBtn(){
-    document.getElementById("arraySize").disabled=false;
+// Enables the "Array Size" slider after sorting is complete
+function enableArraySizeBtn() {
+    document.getElementById("arraySize").disabled = false;
 }
