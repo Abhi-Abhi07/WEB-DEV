@@ -48,7 +48,7 @@ function addProcessINReadyQueue(arr, readyQueue, totalTime) {
     updateReadyQueue(readyQueue);
 }
 
-// SRTF (shortest remaining time first) Algorithm Execution
+// Preemptive Priority Algorithm Execution
 const runPreemptivePriority = async () => {
     // Initialization of variables
     let totalTime = 0; // Total time elapsed
