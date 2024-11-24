@@ -16,7 +16,7 @@ body {
     background: #e0e0e0;
     border: 2px solid green;
     width: auto;
-    height: 100vh;
+    height: 100%;
     padding: 0.5rem;
     margin: 1rem;
     border-radius: 10px;
@@ -73,6 +73,7 @@ button:hover, .range_style_btn:hover {
     background: linear-gradient(150deg, #6e01a3 14%, #005a9f 40%, #8c0038 100%);
     background-clip: text;
     color: transparent;
+    transition: transform 0.3s, text-shadow 0.3s;
 }
 
 /* Logo hover effects: scale, shadow, and text adjustments */

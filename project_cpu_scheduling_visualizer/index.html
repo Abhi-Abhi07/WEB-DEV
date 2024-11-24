@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduler Simulation</title>
+    
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" media="screen" href="style.css">
+    
+    <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header section with page title -->
+        <header class="header">
+            <h1 class="logo">CPU Scheduler Simulation</h1>
+        </header>
+        
+        <!-- Algorithm selection section -->
+        <div class="algorithm-selection">
+            <div class="grid grid-two--cols">
+                
+                <!-- Controls for algorithm selection and time quantum input -->
+                <div class="controls">
+                    
+                    <!-- Algorithm dropdown selection -->
+                    <div class="algorithm-selector">
+                        <label for="algorithmSelect">Select Algorithm : </label>
+                        <select name="algorithm" id="algorithmSelect">
+                            <option value="FCFS">FCFS</option>
+                            <option value="RR">RR</option>
+                            <option value="SJF">SJF</option>
+                            <option value="SRTF">SRTF</option>
+                            <option value="Priority">Priority</option>
+                            <option value="P-Priority">Preemptive Priority</option>
+                        </select>
+                    </div>
+
+                    <!-- Time Quantum input field, used for the Round Robin algorithm -->
+                    <div class="time-quantum">
+                        <!-- <label for="timeQuantumInput">Time Quantum : </label>
+                        <input type="number" min="1" max="5" value="2" step="1" id="timeQuantumInput"> -->
+                    </div>
+
+                    <!-- context switch input field, used for set context switch time according to us -->
+                    <div class="context-switch">
+                        <label for="contextSwitch">context Switch : </label>
+                        <input type="number" min="0" max="1" value="0.2" step="0.1" id="contextSwitch">
+                    </div>
+
+                    <!-- Control buttons for adding, deleting, generating rows of data and running algo -->
+                    <div class="button-group">
+                        <button class="btn" role="button" id="addRowButton">Add Row</button>
+                        <button class="btn" role="button" id="deleteRowButton">Delete Row</button>
+                        <button class="btn" role="button" id="generateDataButton">Random Data</button>  
+                        <button class="btn" role="button" id="startButton">Start</button>  
+                    </div>
+
+                    <!-- Control button for algo speed control -->
+                    <div class="algo_speed_container">
+                        <label for="algoSpeed" class="algo_speed_btn">Algo Speed Controler:</label>
+                        <input type="range" id="algoSpeed" class="range-style" min="0" max="100" value="40">
+                    </div>
+                </div>
+                
+                <!-- Table to display process data (e.g., arrival time, burst time, etc.) -->
+                <div class="process-table">
+                    <table>
+                        <thead class="process-table--head">
+                            <tr>
+                                <th>Priority</th>
+                                <th>Process No</th>
+                                <th>Arrival Time (AT)</th>
+                                <th>Burst Time (BT)</th>
+                                <th>Completion Time (CT)</th>
+                                <th>Turnaround Time (TAT=CT-AT)</th>
+                                <th>Waiting Time (WT=TAT-BT)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="process-table--body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simulation statistics section -->
+        <div class="simulation-stats">
+            <div class="grid grid-two--cols">
+                
+                <!-- Display panel for simulation details and metrics -->
+                <div class="stats-display">
+                    
+                    <!-- Display selected algorithm -->
+                    <label for="algorithmDisplay">Algorithm: </label>
+                    <span id="algorithmDisplay" class="stat-algorithm">FCFS</span>
+
+                    <!-- CPU status display (e.g., idle or processing) -->
+                    <label for="cpuStatus">CPU Status: </label>
+                    <span id="cpuStatus" class="stat-cpu">Idle</span>
+
+                    <!-- Average waiting time (AWT) display -->
+                    <label for="avgWaitingTime">Average Waiting Time (AWT): </label>
+                    <span id="avgWaitingTime" class="stat-awt">---</span>
+
+                    <!-- Average turnaround time (ATAT) display -->
+                    <label for="avgTurnaroundTime">Average Turnaround Time (ATAT): </label>
+                    <span id="avgTurnaroundTime" class="stat-atat">---</span>
+
+                    <!-- Total execution time display -->
+                    <label for="executionTime">Total Execution Time: </label>
+                    <span id="executionTime" class="stat-execution-time">---</span>
+                    
+                    <!-- Efficiency display -->
+                    <label for="efficiencyDisplay">Efficiency: </label>
+                    <span id="efficiencyDisplay" class="stat-efficiency">---</span>
+                    <!-- <input id="efficiencyDisplay" class="stat-efficiency" type="text" value="---" readonly> -->
+                </div>
+
+                <!-- Table to display current status of each process in the simulation -->
+                <div class="status-table--container">
+                    <table>
+                        <thead class="status-table--head">
+                            <tr>
+                                <th>Priority</th>
+                                <th>Process No</th>
+                                <th>Status Bar</th>
+                                <th>Remaining BT</th>
+                                <th>Execution End Time (CT)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="status-table--body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Display a ready queue for better visualization -->
+            <div class="ready-queue-container">
+                <h2>Ready Queue</h2>
+                <div class="ready-queue"></div>
+              </div>
+            <!-- Display a gantt chart for better algo understanding or visualization -->
+              <div class="gantt-chart-container">
+                <h2>Gantt Chart</h2>
+                <div class="gantt-chart"></div>
+              </div>
+              
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="js-files/index.js"></script>
+    <script src="js-files/processTable.js"></script>
+    <script src="js-files/statusTable.js"></script>
+    <script src="js-files/schedulingAlgorithms/FCFS.js"></script>
+    <script src="js-files/util.js/waitForMe.js"></script>
+    <script src="js-files/schedulingAlgorithms/roundRobin.js"></script>
+    <script src="js-files/util.js/util.js"></script>
+    <script src="js-files/schedulingAlgorithms/SJF.js"></script>
+    <script src="js-files/schedulingAlgorithms/SRTF.js"></script>
+    <script src="js-files/schedulingAlgorithms/priority.js"></script>
+    <script src="js-files/schedulingAlgorithms/preemptivePriority.js"></script>
+</body>
+</html>
