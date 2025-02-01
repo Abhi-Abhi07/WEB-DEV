@@ -34,7 +34,7 @@ function App() {
     // setCounter((preCounter)=>{return preCounter+1});
 
     // you can write this in simply
-    setCounter(counter=> counter+1);
+    setCounter((counter)=> counter+1);
     setCounter(counter=> counter+1);
     setCounter(preCounter=> preCounter+1);
     setCounter(preCounter=> preCounter+1);

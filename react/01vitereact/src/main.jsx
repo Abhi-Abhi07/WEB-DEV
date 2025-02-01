@@ -7,7 +7,7 @@ import App from './App.jsx'
 function MyApp(){
     return(
         <div>
-            paani pee lo
+            paani pee lo !
         </div>
     )
 }
@@ -38,6 +38,6 @@ createRoot(document.getElementById('root')).render(
     // anotherReactelem
     // createCustomReactElem
 //   <StrictMode>
-// 
-// </StrictMode>, 
+
+// </StrictMode>
 )
