@@ -53,14 +53,14 @@
 //? 7: new Date(year, month, day, hours, minutes, seconds): Creates a Date object with the specified year, month, day, hours, minutes, and seconds.
 // const date5 = new Date(2024, 1, 19, 10, 44, 9);
 // console.log(date5);
-
+// console.log(new Date())
 //? 8: new Date(year, month, day, hours, minutes, seconds, ms): Creates a Date object with the specified year, month, day, hours, minutes, seconds, and milliseconds.
 // const date6 = new Date(2024, 1, 19, 10, 44, 9, 274);
 // console.log(date6);
 
 //? 9: new Date(milliseconds): Creates a Date object representing the number of milliseconds since the Unix epoch (January 1, 1970, 00:00:00 UTC).
 // const curMilliSeconds = new Date().getTime();
-// // const milliseconds = 1632090690883; // Example milliseconds
+// const milliseconds = 1632090690883; // Example milliseconds
 // const dateFromMilliseconds = new Date(curMilliSeconds);
 // console.log(dateFromMilliseconds);
 
@@ -122,7 +122,7 @@
 // const minutes = currentTime.getMinutes();
 // const seconds = currentTime.getSeconds();
 // const time = currentTime.getTime();
-// console.log(time);
+// console.log(hours);
 
 //* ==================================================
 //* JavaScript Set Time Methods / Getting Components:

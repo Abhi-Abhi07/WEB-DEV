@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main w-full min-h-screen bg-zinc-900 p-10 text-white">
+        <a class="text-blue-500 mb-5" href="/">Go back to home</a>
+            <form action="/edit" method="post">
+                <input class="block text-zinc-500 mb-2 px-5 py-2 rounded-md outline-none bg-zinc-800 w-full" type="text" name="old_name" placeholder="Old file name !" value="<%= filename %>" >
+                <input class="block px-5 py-2 rounded-md outline-none bg-zinc-800 w-full" type="text" name="new_name" placeholder="Write new file name here !" >
+                <input class="mt-2 px-5 py-2 bg-yellow-600 rounded-md" type="submit" name="" id="" value="Change Name">
+            </form>
+    </div>
+</body>
+</html>

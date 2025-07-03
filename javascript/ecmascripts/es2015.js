@@ -32,18 +32,18 @@
 //   console.log(name);
 // }
 
-// name = "technical";
+// // name = "technical";
 // console.log(name);
 
 //? ex2: with the help of let keyword
 // let name = "thapa";
 
 // if (true) {
-//   name = "vinod";
+//   let name = "vinod";
 //   console.log(name);
 // }
 
-// name = "technical";
+// // name = "technical";
 // console.log(name);
 
 //? ex2: with the help of let keyword
@@ -107,8 +107,8 @@
 //? Expression Evaluation: Template expressions can include any valid JavaScript expression.
 
 //! Practice Time
-// console.log("5 * " + num + " = " + 5 * num);
 // let num = 5;
+// console.log("5 * " + num + " = " + 5 * num);
 // console.log(`5 * ${num} = ${5 * num}`);
 
 //? Advantages:
@@ -199,7 +199,7 @@
 // Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. That is, we can extract data from arrays and objects and assign them to variables.
 
 //? 1: Extracting specific elements:
-// const numbers = [10, 20, 30];
+const numbers = [10, 20, 30];
 // const first = numbers[0]; // Traditional way
 // const [first, second, third] = numbers;
 // console.log(second);
@@ -242,7 +242,7 @@
 
 //? 1. Copying an array
 // let fruits = ["Apple", "Orange", "mango", "banana"];
-// let newFruits = [...fruits];
+// let newFruits = [3,...fruits ,"ai"];
 // console.log(newFruits);
 
 //? 2: Concatenating arrays / Combining arrays
@@ -253,7 +253,7 @@
 
 //? 3: Adding Elements to existing array
 // let fruits = ["Apple", "Orange", "mango", "banana"];
-// // fruits.push("guava", "grapes");
+// fruits.push("guava", "grapes");
 // fruits.push(...["guava", "grapes"]);
 // console.log(fruits);
 

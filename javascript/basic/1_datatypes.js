@@ -39,6 +39,7 @@
 //? Symbol: Represents a unique and immutable data type, often used to create unique identifiers.
 // Example:
 // const mySymbol = Symbol("description");
+// console.log(mySymbol)
 
 
 //! ============================
@@ -70,7 +71,7 @@
 
 //? 3: What is the result of `typeof null` in JavaScript❓
 // var badMemories = null;
-// console.log(badMemories);
+// console.log(typeof badMemories);
 // console.log(typeof null);
 
 //? 4: What are primitive data types in JavaScript❓
@@ -78,17 +79,17 @@
 //? 5: Convert a string to a number?
 // We just need to add the '+' sign before the string
 // Example:
-// var myFavNum = "10";
-// console.log(typeof +myFavNum);
-// console.log(typeof Number(myFavNum));
-
+var myFavNum = "ab";
+console.log(typeof +myFavNum);
+console.log(typeof Number(myFavNum));
+console.log(myFavNum)
 //? 6: Convert a number to a string?
 // We just need to add an empty string after the number
 // Example:
 
-// var str = 5;
-// console.log(typeof String(str));
-// console.log(typeof ("" + str));
+var str = 56;
+console.log(typeof String(str));
+console.log(typeof ("" + str));
 
 
 //? 7: Explain the concept of truthy and falsy values in JavaScript. Provide examples.❓
@@ -155,7 +156,7 @@
 // // 77 (leading zeros are ignored)
 // console.log(parseInt("1.9"));
 // console.log(parseFloat("1.9"));
-// 1 (decimal part is truncated)
+// // 1 (decimal part is truncated)
 
 //! When we will not get an Output
 // console.log(parseInt("&123"));

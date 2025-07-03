@@ -18,7 +18,7 @@
 //todo  Use Case: Makes formatting text easier and more predictable, especially for tables, alignments, and UI elements. No more messy, uneven lines disrupting your visual spells!
 
 //? Using padStart() to pad from the beginning:
-// const companyName = "Kodyfier";
+const companyName = "Kodyfier";
 // const paddedName = companyName.padStart(5);
 // const paddedName = companyName.padStart(15);
 // console.log(paddedName);
@@ -26,8 +26,8 @@
 
 //? Using padEnd() to pad from the end:
 // const paddedName = companyName.padEnd(15);
-// const paddedName = companyName.padEnd(15, "$");
-// console.log(paddedName);
+const paddedName = companyName.padEnd(15, "$");
+console.log(paddedName);
 
 //todo Key points:
 //? Both padStart() and padEnd() create a new padded string without modifying the original one.

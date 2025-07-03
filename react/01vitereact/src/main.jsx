@@ -35,9 +35,11 @@ const createCustomReactElem=React.createElement(
 )
 
 createRoot(document.getElementById('root')).render(
+    // reactElem
     // anotherReactelem
     // createCustomReactElem
 //   <StrictMode>
-
-// </StrictMode>
+//     <App/>
+//   </StrictMode>
 )
+

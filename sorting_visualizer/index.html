@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and page title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" media="screen" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SortViz</span>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1 class="hero-title">Sorting Visualizer</h1>
+            <p class="hero-subtitle">Visualize and understand different sorting algorithms through interactive animations</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Controls Section -->
+            <section class="controls-section">
+                <div class="controls-card">
+                    <h2 class="section-title">Controls</h2>
+                    <div class="control-group">
+                        <label for="algoSpeed" class="control-label">
+                            <span class="label-text">Animation Speed</span>
+                            <span class="range-value" id="speedValue">100ms</span>
+                        </label>
+                        <input type="range" id="algoSpeed" class="range-slider" min="0" max="1000" value="100">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="arraySize" class="control-label">
+                            <span class="label-text">Array Size</span>
+                            <span class="range-value" id="sizeValue">20</span>
+                        </label>
+                        <input type="range" id="arraySize" class="range-slider" min="10" max="100" value="20">
+                    </div>
+                    
+                    <button class="btn btn-primary" id="generateArrayBtn">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-text">Generate New Array</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Visualization Section -->
+            <section class="visualization-section">
+                <div class="visualization-card">
+                    <div class="array-info">
+                        <div class="info-item">
+                            <span class="info-label">Current Algorithm:</span>
+                            <span class="info-value" id="currentAlgo">None</span>
+                        </div>
+                      
+                        <div class="info-item complexity-info">
+                            <span class="info-label">Complexity:</span>
+                            <span class="info-value" id="timeComplexity">-</span>
+                        </div>
+                       
+                        <div class="info-item properties-info">
+                            <span class="info-label">Properties:</span>
+                            <span class="info-value" id="algorithmProperties">-</span>
+                        </div>
+                    </div>
+                    <div class="array-container" id="array_container"></div>
+                </div>
+            </section>
+
+            <!-- Algorithms Section -->
+            <section class="algorithms-section">
+                <div class="algorithms-card">
+                    <h2 class="section-title">Sorting Algorithms</h2>
+                    <div class="algorithms-grid">
+                        <button class="algo-btn bubble_sort" title="Bubble Sort - O(n²)">
+                            <span class="algo-icon">🫧</span>
+                            <span class="algo-name">Bubble Sort</span>
+                            <span class="algo-complexity">O(n²)</span>
+                        </button>
+                        <button class="algo-btn selection_sort" title="Selection Sort - O(n²)">
+                            <span class="algo-icon">🎯</span>
+                            <span class="algo-name">Selection Sort</span>
+                            <span class="algo-complexity">O(n²)</span>
+                        </button>
+                        <button class="algo-btn insertion_sort" title="Insertion Sort - O(n²)">
+                            <span class="algo-icon">📝</span>
+                            <span class="algo-name">Insertion Sort</span>
+                            <span class="algo-complexity">O(n²)</span>
+                        </button>
+                        <button class="algo-btn merge_sort" title="Merge Sort - O(n log n)">
+                            <span class="algo-icon">🔄</span>
+                            <span class="algo-name">Merge Sort</span>
+                            <span class="algo-complexity">O(n log n)</span>
+                        </button>
+                        <button class="algo-btn quick_sort" title="Quick Sort - O(n log n)">
+                            <span class="algo-icon">⚡</span>
+                            <span class="algo-name">Quick Sort</span>
+                            <span class="algo-complexity">O(n log n)</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="js_files/theme.js"></script>
+    <script type="module" src="js_files/index.js"></script>
+    <script type="module" src="js_files/sorting_algo/bubble.js"></script>
+    <script type="module" src="js_files/sorting_algo/selection.js"></script>
+    <script type="module" src="js_files/sorting_algo/insertion.js"></script>
+    <script type="module" src="js_files/sorting_algo/merge.js"></script>
+    <script type="module" src="js_files/sorting_algo/quick.js"></script>
+    <script type="module" src="js_files/disable_enable_btns/disableEnableBtn.js"></script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Setting base font size for rem scaling */
+html {
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+
+/* Centering the main container */
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Common container styling for algorithm selection and simulation stats */
+.algorithm-selection,
+.simulation-stats {
+    background: linear-gradient(333deg, rgba(195,90,255,1) 0%, rgba(85,64,255,1) 100%);
+    border: 2px solid black;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    padding: 2rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+/* Header section styling */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* Logo styling with hover effects */
+.logo {
+    text-shadow: 0px 0px 15px #000;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.2rem;
+    background: linear-gradient(150deg, #6e01a3 14%, #005a9f 40%, #8c0038 100%);
+    background-clip: text;
+    color: transparent;
+    transition: transform 0.3s, text-shadow 0.3s;
+}
+
+/* Logo hover effects */
+.logo:hover {
+    text-shadow: 0px 0px 15px #fff, 1px 0 #000, -1px 0 #000;
+    transform: scale(1.1); /* Slight zoom effect */
+    cursor: pointer;
+}
+
+/* Two-column layout for controls and tables */
+.grid-two--cols {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+/* Controls section */
+.controls {
+    margin: 2rem;
+}
+
+/* General styles for the container */
+.algorithm-selector,
+.time-quantum,
+.context-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Aligns label and input in the same row */
+    margin-bottom: 1rem; /* Adds spacing between rows */
+}
+
+/* Label styles */
+.algorithm-selector label,
+.time-quantum label,
+.context-switch label,
+.algo_speed_container label {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+    margin-right: 1rem; /* Adds spacing between the label and the input */
+    min-width: 220px; /* Ensures consistent width for all labels */
+    text-align: center; /* Aligns label text to the right for better visuals */
+}
+
+/* Input field styles */
+#algorithmSelect,
+#timeQuantumInput,
+#contextSwitch {
+    font-size: 1.6rem;
+    color: #007bff;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem; /* Padding for better clickability */
+    border: 1px solid #ccc;
+    width: 20rem;
+    outline: none;
+}
+
+/* Button group */
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 28rem;
+    margin: 2rem auto;
+}
+
+.button-group button {
+    font-size: 1.6rem;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+/* Table container styling */
+.process-table,
+.status-table--container {
+    margin: 2rem;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    background-color: #fff;
+}
+
+thead th {
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #cecece;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+tbody td {
+    padding: 8px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+/* Alternate row colors for better readability */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Row hover effect */
+tbody tr td:hover {
+    background-color: #d5ebff;
+}
+
+/* Stats display */
+.stats-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.stats-display label {
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 4px #000;
+}
+
+.stats-display span {
+    padding: 5px 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    color: #007bff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Glowing Button Styling */
+.btn {
+    padding: 0.6em 2em;
+    color: #fff;
+    background: #111;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+/* Glowing effect for buttons */
+.btn::before {
+    content: "";
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    filter: blur(2px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 10px;
+    z-index: -2;
+}
+
+/* Animation for button glow */
+.btn:hover::before {
+    filter: blur(5px);
+    animation: glowing-button 20s linear infinite;
+    -webkit-animation: glowing-button 20s linear infinite;
+}
+
+/* Glow animation keyframes */
+@keyframes glowing-button {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.btn::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+/* btn hover effect */
+.btn:hover::after{
+    background: none;
+}
+.btn:hover{
+    color: #222;
+    font-weight: 700;
+    outline: 1px solid #000;
+}
+
+/* Status Bar Styling */
+.status-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.status-bar--progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    transition: width 0.1s ease-in-out;
+}
+
+/* ready queue and gantt chart font styling */
+h2{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+/* Ready Queue */
+.ready-queue {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #e8f4ff;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+}
+
+.queue-item {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Gantt Chart */
+.gantt-chart {
+    display: flex;
+    gap: 2px;
+    padding: 10px;
+    background-color: #f4f4f9;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.gantt-block {
+    height: 30px;
+    background-color: #85c1e9;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Layout containers for algorithm speed and array size with gap between elements */
+.algo_speed_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Input range slider styling */
+input[type="range"] {
+    appearance: none;
+    width: 24rem;
+    height: 36px;
+    padding: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    border: 2px solid black;
+    /* box-shadow: -2px -2px 8px black, 2px 2px 8px rgba(0, 0, 0, 0.5); */
+}
+
+/* Track styling for WebKit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 8px white, inset 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Track styling for Mozilla browsers */
+input[type="range"]::-moz-range-track {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 8px white, inset 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Thumb styling for WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    position: relative;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    box-shadow: -1px -1px 2px white, 1px 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Thumb styling for Mozilla browsers */
+input[type="range"]::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    box-shadow: -1px -1px 2px white, 1px 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Responsive Design Breakpoints */
+@media (max-width: 1400px) {
+    html {
+        font-size: 56.25%; /* 1 rem = 9px */
+    }
+    
+    .algorithm-selection,
+    .simulation-stats {
+        width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .grid-two--cols {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .grid-two--cols {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-display {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .button-group {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 50%; /* 1 rem = 8px */
+    }
+    
+    .grid-two--cols {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls {
+        margin: 1rem;
+    }
+    
+    .button-group {
+        width: 100%;
+    }
+    
+    .stats-display {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .process-table,
+    .status-table--container {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .algorithm-selection,
+    .simulation-stats {
+        padding: 1rem;
+    }
+    
+    .controls {
+        margin: 0.5rem;
+    }
+    
+    .algorithm-selector label,
+    .time-quantum label,
+    .context-switch label,
+    .algo_speed_container label {
+        font-size: 2rem;
+        min-width: 180px;
+    }
+    
+    #algorithmSelect,
+    #timeQuantumInput,
+    #contextSwitch {
+        width: 100%;
+        max-width: 20rem;
+    }
+    
+    .button-group {
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        gap: 0.8rem;
+    }
+    
+    .button-group button {
+        padding: 0.8rem 1.6rem;
+    }
+    
+    .stats-display {
+        grid-template-columns: 1fr;
+        margin: 1rem;
+    }
+    
+    .stats-display label {
+        font-size: 2rem;
+    }
+    
+    .stats-display span {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 43.75%; /* 1 rem = 7px */
+    }
+    
+    .logo {
+        font-size: 2.8rem;
+    }
+    
+    .algorithm-selector label,
+    .time-quantum label,
+    .context-switch label,
+    .algo_speed_container label {
+        font-size: 1.8rem;
+        min-width: 150px;
+    }
+    
+    .process-table,
+    .status-table--container {
+        margin: 0.5rem;
+    }
+    
+    table {
+        font-size: 1.4rem;
+    }
+    
+    thead th,
+    tbody td {
+        padding: 6px;
+    }
+    
+    .button-group {
+        gap: 0.6rem;
+    }
+    
+    .button-group button {
+        padding: 0.7rem 1.4rem;
+        font-size: 1.4rem;
+    }
+}
+
+/* Add smooth scrolling for better mobile experience */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve table responsiveness */
+table {
+    min-width: 600px; /* Minimum width to prevent squishing */
+}
+
+/* Add touch-friendly styles for mobile */
+@media (hover: none) {
+    .btn:hover::before {
+        animation: none;
+    }
+    
+    .btn:active::before {
+        filter: blur(5px);
+    }
+    
+    tbody tr td:hover {
+        background-color: transparent;
+    }
+    
+    tbody tr td:active {
+        background-color: #d5ebff;
+    }
+}

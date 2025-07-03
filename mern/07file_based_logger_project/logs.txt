@@ -1,0 +1,4 @@
+[2025-05-29T09:09:54.694Z] Platform: win32
+[2025-05-29T09:09:54.692Z] Starting system info logging...
+[2025-05-29T09:09:54.694Z] Free memory: 531808256
+[2025-05-29T09:09:54.694Z] Logger finished.

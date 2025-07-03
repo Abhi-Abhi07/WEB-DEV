@@ -28,7 +28,7 @@
 
 // let text = "My name is " Thapa Technical " & I am a Full Stack Developer. ";
 // let text ="My name is ' Thapa Technical ' & \\ I am a \"Full Stack \" Developer. ";
-// // let text = 'My name is " Thapa Technical " & I am a Full Stack Developer. ';
+// let text = 'My name is " Thapa Technical " & I am a Full Stack Developer. ';
 
 // console.log(text);
 
@@ -44,7 +44,7 @@
 
 // let text = "Vinod Thapa";
 // console.log(text.indexOf("thapa"));
-// The indexOf() method is case sensitive.
+// // The indexOf() method is case sensitive.
 // console.log(text.indexOf("Thapa"));
 
 // let strArr = Array.from(text);
@@ -307,20 +307,20 @@
 
 //! 4: Write a JavaScript function to check if the given sting is Pangram or not?
 
-// const pangramChecker = (str) => {
-//   let inputArr = str.toLowerCase().split("");
-//   // console.log(inputArr);
-//   // // console.log("z".charCodeAt());
-//   const values = inputArr.filter(
-//     (curElem) =>
-//       curElem.charCodeAt() >= "a".charCodeAt() &&
-//       curElem.charCodeAt() <= "z".charCodeAt()
-//   );
-//   // console.log(values);
+const pangramChecker = (str) => {
+  let inputArr = str.toLowerCase().split("");
+  // console.log(inputArr);
+  // // console.log("z".charCodeAt());
+  const values = inputArr.filter(
+    (curElem) =>
+      curElem.charCodeAt() >= "a".charCodeAt() &&
+      curElem.charCodeAt() <= "z".charCodeAt()
+  );
+  // console.log(values);
 
-//   return new Set(values).size === 26;
+  return new Set(values).size === 26;
 
-//   // return [...new Set(values)].length === 26;
-// };
+  // return [...new Set(values)].length === 26;
+};
 
-// console.log(pangramChecker("The quick  @ brown fox jumps ove the lazy dog"));
+console.log(pangramChecker("The quick  @ brown fox jumps ove the lazy dog"));

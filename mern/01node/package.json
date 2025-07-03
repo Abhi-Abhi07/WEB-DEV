@@ -1,0 +1,18 @@
+{
+  "name": "01node",
+  "version": "1.0.0",
+  "description": "my project",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "node ./scripts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "@ar"
+  },
+  "keywords": [
+    "aaw"
+  ],
+  "author": "Abhishek Gurjar",
+  "license": "ISC"
+}

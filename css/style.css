@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+
+.child{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid #988d8d;
+    border-top-color: #322c2c;
+    animation: rotate 1s infinite;
+    -webkit-animation: rotate 1s infinite;
+}
+@keyframes rotate {
+    100%{
+        rotate: 360deg;
+    }
+}

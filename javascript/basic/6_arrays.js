@@ -48,7 +48,7 @@
 //* ============================================
 //?👉 Array Traversal / Iterating Over Arrays
 
-let fruits = ["apple", "orange", "mango", "grapes", "banana"];
+// let fruits = ["apple", "orange", "mango", "grapes", "banana"];
 
 //? 1: for of loop , also known as iterable
 //* for...of Loop: The for...of loop is used to iterate over the values of an iterable object, such as arrays, strings, or other iterable objects.
@@ -71,11 +71,10 @@ let fruits = ["apple", "orange", "mango", "grapes", "banana"];
 // ? 3: forEach Method
 //* The arr.forEach() method calls the provided function once for each element of the array. The provided function may perform any kind of operation on the elements of the given array.
 
-// const myForEachArr = fruits.forEach((curElem, index, arr) => {
-//   return `${curElem} ${index}`;
+// fruits.forEach((curElem, index, arr) => {
+//   console.log(`${curElem} ${index}`);
 //     // console.log(arr);
 // });
-// console.log(myForEachArr);
 
 // ? 4: map function
 //* map() creates a new array from calling a function for every array element. map() does not change the original array.
@@ -204,8 +203,9 @@ let fruits = ["apple", "orange", "mango", "grapes", "banana"];
 // months.splice(months.length, 0, "Dec");
 // // console.log(months);
 
-// // 2:
-// // When used to add elements, the splice method returns an empty array ([]).
+// 2:
+// console.log(months.splice(months.length, 0, "Dec"));
+// When used to add elements, the splice method returns an empty array ([]).
 
 // // 3
 // const indexToUpdate = months.indexOf("march");

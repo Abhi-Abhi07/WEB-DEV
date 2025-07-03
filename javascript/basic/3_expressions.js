@@ -80,6 +80,7 @@
 
 //! var result = 0.1 + 0.2 ❓ 🤔💭
 // var result = 0.1 + 0.2;
+// console.log(result)
 // console.log(result.toFixed(2));
 // when working with floating-point numbers in JavaScript, consider using methods like toFixed() when precise decimal representation is necessary.
 
@@ -119,7 +120,7 @@
 
 //? Not Equal (!=   👉 ! =):
 // Checks if two values are not equal, performing type coercion if necessary.
-// console.log(5 != 5);
+// console.log(5 != "5");
 
 //? Greater Than (>):
 // Checks if the value on the left is greater than the value on the right.
@@ -191,8 +192,8 @@
 // var age = 19;
 // var hadDrivingLicense = false;
 
-// // age > 18
-// // age == 18
+// age > 18
+// age == 18
 // console.log(age >= 18 && hadDrivingLicense);
 
 //! How would the result change if hasDriverLicense was set to false❓

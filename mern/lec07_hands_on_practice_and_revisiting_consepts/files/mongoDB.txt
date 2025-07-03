@@ -1,0 +1,1 @@
+"MongoDB is a type of NoSQL database. It is used for storing and managing data in a flexible, document-oriented format."

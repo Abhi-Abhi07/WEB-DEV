@@ -1,0 +1,1 @@
+alert("aaj to mern sikhne ka mja aa rha ahi")
