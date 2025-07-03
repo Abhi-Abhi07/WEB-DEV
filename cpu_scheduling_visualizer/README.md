@@ -84,4 +84,4 @@ To view the CPU scheduling visualizer:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Abhi-Abhi07/WEB-DEV/tree/master/project_cpu_scheduling_visualizer
+   git clone https://github.com/Abhi-Abhi07/WEB-DEV/tree/master/cpu_scheduling_visualizer

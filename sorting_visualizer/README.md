@@ -57,7 +57,7 @@ A modern, interactive web application that visualizes various sorting algorithms
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Abhi-Abhi07/WEB-DEV/tree/master/Project_sorting_visualizer
+   git clone https://github.com/Abhi-Abhi07/WEB-DEV/tree/master/sorting_visualizer
    ```
 
 2. Navigate to the project directory:
